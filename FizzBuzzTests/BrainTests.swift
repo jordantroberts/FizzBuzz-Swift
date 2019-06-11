@@ -10,6 +10,8 @@ import XCTest
 @testable import FizzBuzz
 
 class BrainTests: XCTestCase {
+    
+    let brain = Brain()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,40 +22,31 @@ class BrainTests: XCTestCase {
     }
 
     func testIsDivisibleByThree() {
-        let brain = Brain()
-        // declare a new variable, brain, an instance of our Brain class
         let result = brain.isDivisibleByThree(number: 3)
-        // brain checks whether the number is divisible by 3
         XCTAssertEqual(result, true)
-        // We use XCTAssertEqual to compare the result of  our test with the expected resut (in this case, true) We expect that when we ask our brain to check if 2 is divisibvle by 3, it will respond true.
     }
     
     func testIsNotDivisibleByThree() {
-        let brain = Brain()
         let result = brain.isDivisibleByThree(number: 1)
         XCTAssertEqual(result, false)
     }
     
     func testIsDivisibleByFive() {
-        let brain = Brain()
         let result = brain.isDivisibleByFive(number: 5)
         XCTAssertEqual(result, true)
     }
     
     func testIsNotDivisibleByFive() {
-        let brain = Brain()
         let result = brain.isDivisibleByFive(number: 1)
         XCTAssertEqual(result, false)
     }
     
     func testIsDivisibleByFifteen() {
-        let brain = Brain()
         let result = brain.isDivisibleByFifteen(number:15)
         XCTAssertEqual(result, true)
     }
     
     func testIsNotDivisibleByFifteen() {
-        let brain = Brain()
         let result = brain.isDivisibleByFifteen(number: 1)
         XCTAssertEqual(result, false)
     }
