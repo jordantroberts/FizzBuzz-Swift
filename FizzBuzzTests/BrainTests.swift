@@ -27,5 +27,11 @@ class BrainTests: XCTestCase {
         XCTAssertEqual(result, true)
         // We use XCTAssertEqual to compare the result of  our test with the expected resut (in this case, true) We expect that when we ask our brain to check if 2 is divisibvle by 3, it will respond true.
     }
+    
+    func testIsNotDivisibleByThree() {
+        let brain = Brain()
+        let result = brain.isDivisibleByThree(number: 1)
+        XCTAssertEqual(result, false)
+    }
 
 }
