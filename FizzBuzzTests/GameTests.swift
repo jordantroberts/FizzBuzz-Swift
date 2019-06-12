@@ -36,10 +36,18 @@ class GameTests: XCTestCase {
         XCTAssertTrue(game.score == 2)
     }
     
+    // I was receiving a warning that I have a function (play) that is returning a value I'm ignoring (which is just not good practice), so the _ indicates to the code compiler that I won't use this value
+    
     func testIfMoveIsRight() {
         game.score = 2
         let result = game.play(move: "Fizz")
         // For this test we set the score to 2, so that the next move by the player should be “Fizz”
         XCTAssertEqual(result, true)
+    }
+    
+    func testIfMoveIsWrong() {
+        game.score = 1
+        let result = game.play(move: "Fizz")
+        XCTAssertEqual(result, false)
     }
 }
