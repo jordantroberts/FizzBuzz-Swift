@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,35 +13,79 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-pz-paK">
-                                <rect key="frame" x="228" y="574" width="96" height="40"/>
+                                <rect key="frame" x="267" y="769" width="96" height="40"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Play again">
                                     <color key="titleColor" red="0.94117647058823528" green="0.54117647058823526" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 / 5 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1G-UK-0pQ">
-                                <rect key="frame" x="255" y="45" width="50" height="28"/>
+                                <rect key="frame" x="294" y="69" width="50" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="0.94117647059999998" green="0.54117647059999996" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1KI-tk-bxi">
-                                <rect key="frame" x="40" y="269" width="295" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KI-tk-bxi">
+                                <rect key="frame" x="40" y="269" width="334" height="479"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQ3-9Z-9JY">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="120"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
+                                        <state key="normal" title="0" backgroundImage="button_border">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTx-zO-os5">
+                                        <rect key="frame" x="176" y="-1" width="119" height="120"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
+                                        <state key="normal" title="Fizz" backgroundImage="button_border">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-0k-9yp">
+                                        <rect key="frame" x="176" y="138" width="119" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
+                                        <state key="normal" title="FizzBuzz" backgroundImage="button_border">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GQ3-9Z-9JY" firstAttribute="height" secondItem="1KI-tk-bxi" secondAttribute="height" multiplier="0.48" id="5mZ-ZG-Q5p"/>
+                                    <constraint firstItem="GQ3-9Z-9JY" firstAttribute="width" secondItem="1KI-tk-bxi" secondAttribute="width" multiplier="0.48" id="OeL-ee-MQu"/>
+                                    <constraint firstItem="GQ3-9Z-9JY" firstAttribute="top" secondItem="1KI-tk-bxi" secondAttribute="top" id="V1T-1L-cOl"/>
+                                    <constraint firstItem="aTx-zO-os5" firstAttribute="top" secondItem="1KI-tk-bxi" secondAttribute="top" constant="-1" id="aKq-R1-zDv"/>
+                                    <constraint firstAttribute="trailing" secondItem="aTx-zO-os5" secondAttribute="trailing" constant="372" id="szt-jW-ha3"/>
+                                    <constraint firstItem="GQ3-9Z-9JY" firstAttribute="leading" secondItem="1KI-tk-bxi" secondAttribute="leading" id="yMY-hc-Pf3"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEw-A7-FRc">
+                                <rect key="frame" x="40" y="405" width="119" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
+                                <state key="normal" title="Buzz" backgroundImage="button_border">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.92941176470588238" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xfc-pz-paK" secondAttribute="bottom" constant="53" id="4ov-5b-IAu"/>
+                            <constraint firstItem="GQ3-9Z-9JY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.48" constant="-61" id="627-bJ-P2S"/>
+                            <constraint firstItem="GQ3-9Z-9JY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="269" id="9K3-HX-nxM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H1G-UK-0pQ" secondAttribute="trailing" constant="70" id="HWV-Fs-AxZ"/>
                             <constraint firstItem="1KI-tk-bxi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Thc-sD-hFH"/>
                             <constraint firstItem="H1G-UK-0pQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Y6R-p4-0ph"/>
+                            <constraint firstItem="GQ3-9Z-9JY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.48" constant="-200.15999999999997" id="ZE6-B8-eGU"/>
+                            <constraint firstItem="GQ3-9Z-9JY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="hdz-9B-BC0"/>
                             <constraint firstItem="1KI-tk-bxi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1" id="kHR-cq-3Rb"/>
                             <constraint firstItem="1KI-tk-bxi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="s0u-G7-J2u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xfc-pz-paK" secondAttribute="trailing" constant="51" id="y7A-jB-riv"/>
@@ -51,6 +95,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_border" width="400" height="400"/>
+    </resources>
 </document>
